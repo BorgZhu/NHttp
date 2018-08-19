@@ -357,7 +357,9 @@ namespace NHttp
 
                         _parser = new HttpMultiPartRequestParser(this, contentLength, boundary);
                         break;
-
+                    case "application/json":
+                        _parser = new HttpJsonRequestParser(this, contentLength);
+                        break;
                     default:
                         _parser = new HttpUnknownRequestParser(this, contentLength);
                         break;

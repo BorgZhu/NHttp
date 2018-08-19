@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 
 namespace NHttp.Demo
@@ -30,7 +31,7 @@ namespace NHttp.Demo
                 // Start the server on a random port. Use server.EndPoint
                 // to specify a specific port, e.g.:
                 //
-                //     server.EndPoint = new IPEndPoint(IPAddress.Loopback, 80);
+                     server.EndPoint = new IPEndPoint(IPAddress.Loopback, 8088);
                 //
 
                 server.Start();
